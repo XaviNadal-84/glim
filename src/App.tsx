@@ -12,21 +12,30 @@ function App() {
         alignItems: "center",
         flexWrap: "wrap"
       }}>
-        <Button variant="primary" size="small">
-          Primary Small
-        </Button>
+        <Button
+          variant="Primary"
+          size="XL"
+          label="Primary XL"
+        />
 
-        <Button variant="primary" size="medium">
-          Primary Medium
-        </Button>
+        <Button
+          variant="Secondary"
+          size="LG"
+          label="Secondary LG"
+        />
 
-        <Button variant="secondary" size="large">
-          Secondary Large
-        </Button>
+        <Button
+          variant="Tertiary"
+          size="MD"
+          label="Tertiary MD"
+        />
 
-        <Button disabled>
-          Disabled
-        </Button>
+        <Button
+          variant="Primary"
+          size="SM"
+          state="Disabled"
+          label="Disabled"
+        />
       </section>
     </main>
   );

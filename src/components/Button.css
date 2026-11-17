@@ -1,37 +1,54 @@
 
 .button {
   border: none;
-  border-radius: 8px;
+  border-radius: 999px;
+  font-family: inherit;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
+/* VARIANTS */
+
 .button--primary {
   background: #3484F0;
-  color: white;
+  color: #FFFFFF;
 }
 
 .button--secondary {
-  background: white;
+  background: #FFFFFF;
   color: #3484F0;
   border: 1px solid #3484F0;
 }
 
-.button--small {
-  padding: 8px 12px;
-  font-size: 12px;
+.button--tertiary {
+  background: transparent;
+  color: #3484F0;
 }
 
-.button--medium {
-  padding: 12px 16px;
+/* SIZES */
+
+.button--xl {
+  padding: 18px 32px;
+  font-size: 18px;
+}
+
+.button--lg {
+  padding: 16px 28px;
+  font-size: 16px;
+}
+
+.button--md {
+  padding: 12px 20px;
   font-size: 14px;
 }
 
-.button--large {
-  padding: 16px 24px;
-  font-size: 16px;
+.button--sm {
+  padding: 8px 16px;
+  font-size: 12px;
 }
+
+/* STATES */
 
 .button:disabled {
   opacity: 0.45;

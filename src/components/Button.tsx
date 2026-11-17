@@ -2,24 +2,32 @@
 import "./Button.css";
 
 type ButtonProps = {
-  children: React.ReactNode;
-  variant?: "primary" | "secondary";
-  size?: "small" | "medium" | "large";
-  disabled?: boolean;
+  variant?: "Primary" | "Secondary" | "Tertiary";
+  size?: "XL" | "LG" | "MD" | "SM";
+  state?: "Default" | "Disabled";
+  label: string;
 };
 
 export function Button({
-  children,
-  variant = "primary",
-  size = "medium",
-  disabled = false,
+  variant = "Primary",
+  size = "MD",
+  state = "Default",
+  label,
 }: ButtonProps) {
+  const isDisabled = state === "Disabled";
+
   return (
     <button
-      className={`button button--${variant} button--${size}`}
-      disabled={disabled}
+      className={[
+        "button",
+        `button--${variant.toLowerCase()}`,
+        `button--${size.toLowerCase()}`,
+      ].join(" ")}
+      disabled={isDisabled}
+      type="button"
     >
-      {children}
+      {label}
     </button>
   );
 }
+
